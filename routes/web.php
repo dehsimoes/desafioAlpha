@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/','UserController@login')->name('login.page');
+Route::post('/auth','UserController@auth')->name('auth.user');
+
 Route::get('/contatos', 'ContatosController@index');
 Route::get('/contatos/create', 'ContatosController@create');
 Route::post('/contatos', 'ContatosController@store');

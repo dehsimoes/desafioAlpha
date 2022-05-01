@@ -20,10 +20,10 @@
       @endif
       
         @csrf
-        <input class="form-control" type="text" name="nome" id="nome" placeholder="Digite um nome" value="{{$contatos->nome ?? ''}}" required>
-        <input class="form-control" type="email" name="email" id="email" placeholder="Digite um email" value="{{$contatos->email ?? ''}}" required>
-        <input class="form-control" type="number" name="telefone" id="telefone" placeholder="Digite um telefone" value="{{$contatos->telefone ?? ''}}" required>
-        <input class="btn btn-primary" type="submit" value="@if(isset($contatos)) Editar @else Cadastrar @endif">
+        <input class="form-control mt-3" type="text" name="nome" id="nome" placeholder="Digite um nome" value="{{$contatos->nome ?? ''}}" required>
+        <input class="form-control mt-3" type="email" name="email" id="email" placeholder="Digite um email" value="{{$contatos->email ?? ''}}" required>
+        <input class="form-control mt-3" type="number" name="telefone" id="telefone" placeholder="Digite um telefone" value="{{$contatos->telefone ?? ''}}" required>
+        <input class="btn btn-primary mt-3" type="submit" value="@if(isset($contatos)) Salvar @else Cadastrar @endif">
       </form>
     </div>
 @endsection

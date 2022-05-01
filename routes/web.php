@@ -14,3 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/contatos', 'ContatosController@index');
+Route::get('/contatos/create', 'ContatosController@create');
+Route::post('/contatos', 'ContatosController@store');
+Route::get('/contatos/{id}', 'ContatosController@show');
+Route::get('/contatos/{id}/edit', 'ContatosController@edit');
+Route::put('/contatos/{id}', 'ContatosController@update');
+Route::delete('/contatos/{id}', 'ContatosController@destroy');

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Request\ContatosRequest;
+use App\Http\Requests\ContatosRequest;
 use App\Models\ModelContato;
 use App\User;
 
@@ -21,7 +21,7 @@ class ContatosController extends Controller
 
     public function index() 
     {
-        $contatos=$this->objContato->all()->sortBy('name');
+        $contatos=$this->objContato->all()->sortBy('nome');
         return view('index', compact('contatos'));
     }
 
@@ -39,7 +39,7 @@ class ContatosController extends Controller
     public function store(ContatosRequest $request)
     {
         $cad=$this->objContato->create([
-            'nome'=>$request->name,
+            'nome'=>$request->nome,
             'email'=>$request->email,
             'telefone'=>$request->telefone
         ]);
@@ -58,7 +58,7 @@ class ContatosController extends Controller
     public function update(ContatosRequest $request, $id)
     {
         $this->objContato->where(['id'=>$id])->update([
-            'nome'=>$request->name,
+            'nome'=>$request->nome,
             'email'=>$request->email,
             'telefone'=>$request->telefone
         ]);

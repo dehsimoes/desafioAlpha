@@ -36,9 +36,4 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
-    public function relContatos()
-    {
-        return $this->hasMany('App\Models\ModelContato', 'id_user');
-    }
 }

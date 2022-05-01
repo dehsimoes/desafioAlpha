@@ -24,7 +24,7 @@ class ContatosRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'=>'required|min:5',
+            'nome'=>'required|min:5',
             'email'=>'required|email',
             'telefone'=>'required|numeric|min:9'
         ];

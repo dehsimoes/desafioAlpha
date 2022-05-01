@@ -26,7 +26,7 @@ class ContatosRequest extends FormRequest
         return [
             'nome'=>'required|min:5',
             'email'=>'required|email',
-            'telefone'=>'required|numeric|min:9'
+            'telefone'=>'required|min:9'
         ];
     }
 }

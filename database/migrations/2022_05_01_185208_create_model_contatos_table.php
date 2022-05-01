@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateContatoModelsTable extends Migration
+class CreateModelContatosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -16,7 +16,7 @@ class CreateContatoModelsTable extends Migration
         Schema::create('contato', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nome');
-            $table->integer('telefone')->unique();
+            $table->bigInteger('telefone')->unique();
             $table->string('email')->unique();
             $table->timestamps();
         });
@@ -29,6 +29,6 @@ class CreateContatoModelsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contato_models');
+        Schema::dropIfExists('model_contatos');
     }
 }

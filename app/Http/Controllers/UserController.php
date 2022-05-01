@@ -13,7 +13,7 @@ class UserController extends Controller
         return view('login');
     }
     
-    /*
+
     public function auth(Request $request)
     {
         $this->validate($request, [
@@ -24,7 +24,7 @@ class UserController extends Controller
         if(Auth::attempt(['email'=> $request->email, 'password'=>$request->password])){
             dd('logou!');
         }else{
-            dd('nao logou!');
+            return redirect()->back();
         }
-    } */
+    }
 }
